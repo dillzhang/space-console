@@ -1,0 +1,19 @@
+{
+  "name": "space-console",
+  "version": "1.0.0",
+  "description": "Quick socket console for Interactive Projection Design",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dillzhang/space-console.git"
+  },
+  "author": "Dillon Zhang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dillzhang/space-console/issues"
+  },
+  "homepage": "https://github.com/dillzhang/space-console#readme"
+}
