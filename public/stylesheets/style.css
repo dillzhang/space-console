@@ -39,9 +39,9 @@ body {
 }
 
 .header {
-  width: calc(100vw - 2px);
-  height: 98px;
-  border-bottom: 1px solid var(--third-color);
+  width: calc(100vw - 1px);
+  height: 95px;
+  border-bottom: 5px solid var(--third-color);
 
   padding-left: 50px;
 
@@ -65,18 +65,19 @@ body {
 }
 
 .button-container {
-  /* border: 1px solid var(--third-color); */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  position: relative;
 
   padding: 5px;
 }
 
-.button-container button {
+.button-container .checkmark {
+  position: absolute;
+  left: 5%;
+  top: 5%;
   width: 90%;
   height: 90%;
-  background-color: var(--primary-color); /* Green */
+  background-color: var(--primary-color);
   border: 2px solid var(--third-color);
   color: var(--main-bg-color);
   text-decoration: none;
@@ -84,14 +85,25 @@ body {
   border-radius: 10px;
   transform: translateX(-1px) translateY(-1px);
   box-shadow: 2px 2px #999;
-
   outline: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.button-container button:active {
+.button-container input:checked ~ .checkmark {
   background-color: var(--third-color);
   box-shadow: 0px 0px #999;
   transform: translateX(1px) translateY(1px);
+}
+
+.button-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
 
 .range-slider {

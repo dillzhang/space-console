@@ -1,8 +1,10 @@
 const baseURL = new URL(window.location.href).host;
 var socket = io(baseURL);
 
-const buttonPush = (id) => {
-    socket.emit("input", {device: "button", id, value: 1})
+const checkBox = (id) => {
+    const box = document.getElementById(`checkbox${id}`);
+    const checked = box.checked;
+    socket.emit("input", {device: "checkbox", id, value: checked});
 }
 
 const sliderUpdate = (id) => {
