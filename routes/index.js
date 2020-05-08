@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/console', function(req, res, next) {
-  res.render('console', { title: 'Control Receiver' });
+  res.render('console', { title: 'Space Ship' });
 });
 
 module.exports = router;

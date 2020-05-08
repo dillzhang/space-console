@@ -1,63 +1,65 @@
-<div class="container">
-    <label class="button-container">
-        <input type="checkbox" onchange="checkBox(0)" id="checkbox0"/> <span class="checkmark">0 </span> 
+<div id="blocker" class="blocker">
+    <div id="block-message" class="message">
+        Attempting to connect...
+    </div>
+</div>
+<div id="container" class="container blur">
+    <label class="button-container col-1">
+        <input type="checkbox" onchange="checkBox(0)" id="checkbox0"/> <span class="checkmark"> Open Window </span> 
+    </label>
+    <label class="button-container col-1">
+        <input type="checkbox" onchange="checkBox(1)" id="checkbox1"/> <span class="checkmark"> Extend Probe </span> 
+    </label>
+    <label class="button-container col-1">
+        <input type="checkbox" onchange="checkBox(2)" id="checkbox2"/> <span class="checkmark"> Close Shutter </span> 
+    </label>
+    <label class="button-container col-1">
+        <input type="checkbox" onchange="checkBox(3)" id="checkbox3"/> <span class="checkmark"> Deploy Flaps </span> 
     </label>
     <label class="button-container">
-        <input type="checkbox" onchange="checkBox(1)" id="checkbox1"/> <span class="checkmark">1 </span> 
+        <input type="checkbox" id="control1"/> <span class="checkmark"> Primary Engine </span> 
     </label>
     <label class="button-container">
-        <input type="checkbox" onchange="checkBox(2)" id="checkbox2"/> <span class="checkmark">2 </span> 
+        <input type="checkbox" id="control2"/> <span class="checkmark"> Secondary Engine </span> 
     </label>
     <label class="button-container">
-        <input type="checkbox" onchange="checkBox(3)" id="checkbox3"/> <span class="checkmark">3 </span> 
+        <input type="checkbox" id="control3"/> <span class="checkmark"> Auxilliary Power </span> 
     </label>
     <label class="button-container">
-        <input type="checkbox" onchange="checkBox(4)" id="checkbox4"/> <span class="checkmark">4 </span> 
+        <input type="checkbox" id="control4"/> <span class="checkmark"> Air Lock </span> 
     </label>
     <label class="button-container">
-        <input type="checkbox" onchange="checkBox(5)" id="checkbox5"/> <span class="checkmark">5 </span> 
+        <input type="checkbox" id="control5"/> <span class="checkmark"> Shields </span> 
     </label>
     <label class="button-container">
-        <input type="checkbox" onchange="checkBox(6)" id="checkbox6"/> <span class="checkmark">6 </span> 
+        <input type="checkbox" id="control6"/> <span class="checkmark"> Anchors </span> 
     </label>
     <label class="button-container">
-        <input type="checkbox" onchange="checkBox(7)" id="checkbox7"/> <span class="checkmark">7 </span> 
+        <input type="checkbox" id="control7"/> <span class="checkmark"> Electric </span> 
     </label>
     <label class="button-container">
-        <input type="checkbox" onchange="checkBox(8)" id="checkbox8"/> <span class="checkmark">8 </span> 
+        <input type="checkbox" id="control8"/> <span class="checkmark"> Hydraulics </span> 
     </label>
     <label class="button-container">
-        <input type="checkbox" onchange="checkBox(9)" id="checkbox9"/> <span class="checkmark">9 </span> 
+        <input type="checkbox" id="control9"/> <span class="checkmark"> Valves </span> 
     </label>
-    <label class="button-container">
-        <input type="checkbox" onchange="checkBox(10)" id="checkbox10"/> <span class="checkmark">10 </span> 
-    </label>
-    <label class="button-container">
-        <input type="checkbox" onchange="checkBox(11)" id="checkbox11"/> <span class="checkmark">11 </span> 
-    </label>
-    <label class="button-container">
-        <input type="checkbox" onchange="checkBox(12)" id="checkbox12"/> <span class="checkmark">12 </span> 
-    </label>
-    <label class="button-container">
-        <input type="checkbox" onchange="checkBox(13)" id="checkbox13"/> <span class="checkmark">13 </span> 
-    </label>
-    <label class="button-container">
-        <input type="checkbox" onchange="checkBox(14)" id="checkbox14"/> <span class="checkmark">14 </span> 
-    </label>
-    <label class="button-container">
-        <input type="checkbox" onchange="checkBox(15)" id="checkbox15"/> <span class="checkmark">15 </span> 
-    </label>
+    <div class="button-container-large">
+       <button onclick="sendCommand()"> Send Command </button> 
+    </div>
     <div class="range-slider range-slider-5">
-        <div class="input-holder"><input class="input-range" orient="vertical" type="range" step="1" value="5" min="0" max="10" id="range5" oninput="sliderUpdate(5)"></div>
-        <div class="range-value" id="value5">5</div>
+        <div class="range-value">Pitch</div>
+        <div class="input-holder"><input class="input-range" orient="vertical" type="range" step="1" value="0" min="-90" max="90" id="range5" oninput="sliderUpdate(5)"></div>
+        <div class="range-value" id="value5">0</div>
     </div> 
     <div class="range-slider range-slider-6">
-        <div class="input-holder"><input class="input-range" orient="vertical" type="range" step="1" value="5" min="0" max="10" id="range6" oninput="sliderUpdate(6)"></div>
-        <div class="range-value" id="value6">5</div>
+        <div class="range-value">Yaw</div>
+        <div class="input-holder"><input class="input-range" orient="vertical" type="range" step="1" value="0" min="-180" max="180" id="range6" oninput="sliderUpdate(6)"></div>
+        <div class="range-value" id="value6">0</div>
     </div>
     <div class="range-slider range-slider-7">
-        <div class="input-holder"><input class="input-range" orient="vertical" type="range" step="1" value="5" min="0" max="10" id="range7" oninput="sliderUpdate(7)"></div>
-        <div class="range-value" id="value7">5</div>
+        <div class="range-value">Roll</div>
+        <div class="input-holder"><input class="input-range" orient="vertical" type="range" step="1" value="0" min="-180" max="180" id="range7" oninput="sliderUpdate(7)"></div>
+        <div class="range-value" id="value7">0</div>
     </div>
 </div>
 <script src="javascripts/socketSender.js"></script>
