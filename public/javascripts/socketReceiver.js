@@ -39,7 +39,7 @@ const unlock = () => {
     }, 700);
 }
 
-let minutes = 8;
+let minutes = 10;
 let seconds = 0;
 let updateId;
 
@@ -162,7 +162,7 @@ const penalize = (penaltyTimer) => {
 
 const startGame = () => {
     stage = 0;
-    minutes = 8;
+    minutes = 10;
     seconds = 0;
     penalties = 0;
 
